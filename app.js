@@ -1,4 +1,6 @@
-const quote=require('./quotesCreator.js');
-var Quote = quote.getRandomQuote();
-console.log(Quote.text);
-console.log('Author - '+Quote.author);
+const quote = require('./quotesCreator.js');
+
+module.exports.getRandomQuote = function ()
+{ 
+    return quote.getRandomQuote().text + " ~ " + quote.getRandomQuote().author; 
+};
